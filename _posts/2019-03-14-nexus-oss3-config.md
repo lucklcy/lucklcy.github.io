@@ -95,11 +95,11 @@ _登录用户：admin，默认密码：admin123，登录后可在个人中心修
 
 ###### Nexus Repository Manager 中添加 npm
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-6ed2f417bae14036.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-6ed2f417bae14036.png)
 
 ##### 这里有三个类型的 npm 选项：
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-76bb9056ac0b4799.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-76bb9056ac0b4799.png)
 
 ### 文档中对这三个类型的仓库有详细的解释：
 
@@ -143,16 +143,16 @@ _登录用户：admin，默认密码：admin123，登录后可在个人中心修
 
 1. **创建 Proxying npm Registries 代理仓库**
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-37ebbc0d64c830a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-37ebbc0d64c830a6.png)
 
-2. **创建 Hosted npm Registries 代理仓库**
+1. **创建 Hosted npm Registries 代理仓库**
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-66c19792d1a1af8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-66c19792d1a1af8c.png)
 
-3. **创建 Grouping npm Registries**
+1. **创建 Grouping npm Registries**
    > 仓库需要注意的是组仓库要把之前的 proxy 和 hosted 都添加上。
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-4a3b73e82ef008b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-4a3b73e82ef008b4.png)
 
 ## 配置 npm registry
 
@@ -169,17 +169,17 @@ $ npm -loglevel info install grunt
 
 > 此时可以验证一下 是否依赖走了代理：
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-f8a82f22a035ae41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/558)
+![image](/assets/img/nexus_oss_3/3112405-f8a82f22a035ae41.png)
 
 ## 设置权限
 
 > 把这个选项拖到右边就可以了
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-d90bcf8c8fdcdb2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-d90bcf8c8fdcdb2b.png)
 
 > 在 admin 之外可以重新设置一个账号，以及权限
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-3a59e0300667d076.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-3a59e0300667d076.png)
 
 ```
 // 使用
@@ -187,7 +187,7 @@ $ npm login –registry=http://localhost:8081/repository/mygroup
 // 进行登陆，需要填写账号、密码以及邮箱。
 ```
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-65b42a283b08a7cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/696)
+![image](/assets/img/nexus_oss_3/3112405-65b42a283b08a7cb.png)
 
 > 发布到 hosted
 
@@ -204,7 +204,7 @@ _<br/>pachage.json 文件内容比较随意，如果比较懒 可以用 npm init
 $ npm publish –registry http://localhost:8081/repository/myhost
 ```
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-7ff83834a03ba6c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/659)
+![image](/assets/img/nexus_oss_3/3112405-7ff83834a03ba6c5.png)
 
 > 然后我遇到了报错，按照报错执行
 
@@ -214,11 +214,11 @@ $ npm adduser –registry http://localhost:8081/repository/myhost
 
 > 这里值得注意的是， adduser 的时候要指明是哪个 rep，要不就会 add 到默认的.npmrc 里添加的 rep 中。
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-b9cd8079d4a9c1be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/685)
+![image](/assets/img/nexus_oss_3/3112405-b9cd8079d4a9c1be.png)
 
 > 添加完用户之后，再执行发布命令就 ok 了。
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-394b1c8bce17b24a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/674)
+![image](/assets/img/nexus_oss_3/3112405-394b1c8bce17b24a.png)
 
 > package.json 可以指定 name 和 version 并且可以添加发布路径的配置：
 
@@ -236,10 +236,10 @@ $ npm adduser –registry http://localhost:8081/repository/myhost
 
 发布之后可以在 系统中的 左侧 browse 中的 assets 中看到上传的资源
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-70f6dd148c39055d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+![image](/assets/img/nexus_oss_3/3112405-70f6dd148c39055d.png)
 
 > group 中可以同时看到 proxy 和 hosted 的资源， proxy 会存下第一次下载过的目录，之后再下载时走的是代理，hosted 存的是本地上传的包资源。
 
 然后可以在本地下载一下刚才上传到 hosted 的包：
 
-![image](https://upload-images.jianshu.io/upload_images/3112405-23f5a0982a8abcc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/630)
+![image](/assets/img/nexus_oss_3/3112405-23f5a0982a8abcc7.png)

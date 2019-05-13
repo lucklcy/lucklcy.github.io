@@ -27,6 +27,7 @@ tags: nginx
    <pre><code class="language-conf">~ 为区分大小写匹配
    ~* 为不区分大小写匹配
    !~和!~*分别为区分大小写不匹配及不区分大小写不匹配
+   ^~ 如果把这个前缀用于一个常规字符串,那么告诉nginx 如果路径匹配那么不测试正则表达式。
    </code></pre>
 
 2. 文件及目录匹配，其中：
@@ -124,18 +125,18 @@ tags: nginx
 
 6.禁止访问以.sh,.flv,.mp3 为文件后缀名的文件
 
-<pre><code class="language-conf">location ~ .\*\.(sh|flv|mp3)\$
+<pre><code class="language-conf">location ~ /.*\.(sh|flv|mp3)$
 {
     return 403;
 }</code></pre>
 
 7.设置某些类型文件的浏览器缓存时间
 
-<pre><code class="language-conf">location ~ ._\.(gif|jpg|jpeg|png|bmp|swf)\$
+<pre><code class="language-conf">location ~ /.*\.(gif|jpg|jpeg|png|bmp|swf)$
 {
     expires 30d;
 }
-location ~ ._\.(js|css)\$
+location ~ /.*\.(js|css)$
 {
     expires 1h;
 }</code></pre>
@@ -167,7 +168,7 @@ location ~(robots.txt)
 
 10.文件反盗链并设置过期时间 # 这里的 return412 为自定义的 http 状态码，默认为 403，方便找出正确的盗链的请求
 
-<pre><code class="language-conf">location ~_^.+\.(jpg|jpeg|gif|png|swf|rar|zip|css|js)\$
+<pre><code class="language-conf">location ~_^.+\.(jpg|jpeg|gif|png|swf|rar|zip|css|js)$
 {
     valid_referers none blocked _.linuxidc.com\*.linuxidc.net localhost 208.97.167.194;
     if (\$invalid_referer)

@@ -4,7 +4,7 @@ title: "CSS 动画"
 date: 2019-04-24
 author: lucklcy
 cover: "/assets/img/js.jpg"
-tags: animation
+tags: animation css
 ---
 
 ### CSS动画：animation、transition、transform、translate傻傻分不清
