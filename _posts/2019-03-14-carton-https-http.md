@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "图解Https与Http"
+title: '图解Https与Http'
 date: 2019-03-15
 author: lucklcy
-cover: "/assets/img/http.jpg"
+cover: '/assets/img/http-vs-https.png'
 tags: [http, https]
 ---
 

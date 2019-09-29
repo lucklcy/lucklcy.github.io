@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "前端项目自动化构建"
+title: '前端项目自动化构建'
 date: 2019-06-18
 author: lucklcy
-cover: "/assets/img/vim.jpg"
+cover: '/assets/img/deploy.jpg'
 tags: Deploy
 ---
 

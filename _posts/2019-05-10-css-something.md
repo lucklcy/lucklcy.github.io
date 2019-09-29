@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "一些常用的CSS技巧"
+title: '一些常用的CSS技巧'
 date: 2019-05-10
 author: lucklcy
-cover: "/assets/img/js.jpg"
-tags: css
+cover: '/assets/img/css.png'
+tags: Css
 ---
 
 ### 一.从 html 元素继承 box-sizing

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "常用Nginx配置"
+title: '常用Nginx配置'
 date: 2019-03-14
 author: lucklcy
-cover: "/assets/img/nginx.jpg"
+cover: '/assets/img/nginx-logo.png'
 tags: nginx
 ---
 
@@ -423,15 +423,15 @@ events
     gzip_buffers     4 16k;
 
     #压缩版本（默认1.1，前端为squid2.5时使用1.0）用于设置识别HTTP协议版本，默认是1.1，目前大部分浏览器已经支持GZIP解压，使用默认即可。
-    gzip_http_version 1.0;
+    gzip_http_version 1.1;
 
     #压缩比率。用来指定GZIP压缩比，1压缩比最小，处理速度最快；9压缩比最大，传输速度快，但处理最慢，也比较消耗cpu资源。
-    gzip_comp_level 9;
+    gzip_comp_level 6;
 
     #用来指定压缩的类型，默认就已经包含text/html，所以下面就不用再写了，写上去也不会有问题，但是会有一个warn。
-    gzip_types       text/plain application/x-javascript text/css application/xml;
+    gzip_types text/plain application/x-javascript text/css application/xml text/javascript application/x-httpd-php application/javascript application/json;
     #vary header支持。该选项可以让前端的缓存服务器缓存经过GZIP压缩的页面，例如用
-    gzip_vary off;
+    gzip_vary on;
     #开启限制IP连接数的时候需要使用
     limit_zone crawler $binary_remote_addr 10m;
     #开启ssi支持，默认是off

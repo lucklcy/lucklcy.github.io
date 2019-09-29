@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Nexus OSS 3 搭建npm私服"
+title: 'Nexus OSS 3 搭建npm私服'
 date: 2019-03-14
 author: lucklcy
-cover: "/assets/img/nexus.jpg"
+cover: '/assets/img/npm.jpg'
 tags: Nexus
 ---
 
