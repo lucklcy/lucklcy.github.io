@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Curl Command'
+title: "Curl Command"
 date: 2019-09-29
 author: lucklcy
-cover: '/assets/img/linux-commands.png'
+cover: "/assets/img/linux-commands.png"
 tags: linux
 ---
 
@@ -33,7 +33,8 @@ curl [options] [URL...]
 
 有可能在下載過程中被中斷，若是想要從中斷的地方繼續的話，可以使用 -C 選項：
 
-<pre><code class="language-js">curl -C - -O http://releases.ubuntu.com/18.04/ubuntu-18.04-desktop-amd64.iso</code></pre>
+<pre><code class="language-js">curl -C - -O http://releases.ubuntu.com/18.04/ubuntu-18.04-desktop-
+amd64.iso</code></pre>
 
 若希望可以跟隨著網址 301/302 redirect 的話，可以使用 -L 選項：
 

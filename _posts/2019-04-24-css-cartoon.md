@@ -1,15 +1,15 @@
 ---
 layout: post
-title: 'CSS 动画'
+title: "CSS 动画"
 date: 2019-04-24
 author: lucklcy
-cover: '/assets/img/css.png'
+cover: "/assets/img/css.png"
 tags: Animation Css
 ---
 
-### CSS 动画：animation、transition、transform、translate 傻傻分不清
+# CSS 动画：animation、transition、transform、translate 傻傻分不清
 
-#### 容易混淆的几个 css 属性
+## 容易混淆的几个 css 属性
 
 | 属性               | 含义                                                                                                        |
 | ------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -18,43 +18,42 @@ tags: Animation Css
 | transform（变形）  | 用于元素进行旋转、缩放、移动或倾斜，和设置样式的动画并没有什么关系，就相当于 color 一样用来设置元素的“外表” |
 | translate（移动）  | translate 只是 transform 的一个属性值，即移动。                                                             |
 
-#### transition
+## transition
 
 什么叫过渡？字面意思上来讲，就是元素从这个属性(color)的某个值(red)过渡到这个属性(color)的另外一个值(green)，这是一个状态的转变，需要一种条件来触发这种转变，比如我们平时用到的:hoever、:focus、:checked、媒体查询或者 JavaScript。
 
-例子：
+### 例子：
 
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>transition</title>
-  <style>
-    #box {
-      height: 100px;
-      width: 100px;
-      background: green;
-      transition: transform 1s ease-in 1s;
-    }
+<pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="en">
+  &lt;head>
+    &lt;title>transition</title>
+    &lt;style>
+      #box {
+        height: 100px;
+        width: 100px;
+        background: green;
+        transition: transform 1s ease-in 1s;
+      }
 
-    #box:hover {
-      transform: rotate(180deg) scale(.5, .5);
-    }
-  </style>
-</head>
-<body>
-  <div id="box"></div>
-</body>
-</html>
-```
+      #box:hover {
+        transform: rotate(180deg) scale(.5, .5);
+      }
+    &lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;div id="box"></div>
+  &lt;/body>
+&lt;/html>
+</code></pre>
 
-效果：
+### 效果：
 
 ![image](/assets/img/animation/transition.gif)
 
 我们来分析这一整个过程，首先 transition 给元素设置的过渡属性是 transform，当鼠标移入元素时，元素的 transform 发生变化，那么这个时候就触发了 transition，产生了动画，当鼠标移出时，transform 又发生变化，这个时候还是会触发 transition，产生动画，所以 transition 产生动画的条件是 transition 设置的 property 发生变化，这种动画的特点是需要“一个驱动力去触发”.
 
-有着以下几个不足：
+> 有着以下几个不足：
 
 - 需要事件触发，所以没法在网页加载时自动发生
 - 是一次性的，不能重复发生，除非一再触发
@@ -70,56 +69,54 @@ tags: Animation Css
 | transition-timing-function | 规定速度效果的速度曲线            |
 | transition-delay           | 定义过渡效果何时开始              |
 
-#### animation
+## animation
 
 在官方的介绍上介绍这个属性是 transition 属性的扩展，弥补了 transition 的很多不足，我理解为 animation 是由多个 transition 的效果叠加，并且可操作性更强，能够做出复杂酷炫的效果(前提是你爱折腾)，我们以一个例子来介绍 animation 的威力：
 
-```
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>animation</title>
-  <style>
-    .box {
-      height: 100px;
-      width: 100px;
-      border: 15px solid black;
-      animation: changebox 1s ease-in-out 1s infinite alternate running forwards;
-    }
-
-    .box:hover {
-      animation-play-state: paused;
-    }
-
-    @keyframes changebox {
-      10% {
-        background: red;
+<pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="en">
+  &lt;head>
+    &lt;title>animation</title>
+    &lt;style>
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 15px solid black;
+        animation: changebox 1s ease-in-out 1s infinite alternate 
+                   running forwards;
       }
-      50% {
-        width: 80px;
-      }
-      70% {
-        border: 15px solid yellow;
-      }
-      100% {
-        width: 180px;
-        height: 180px;
-      }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="box"></div>
-</body>
+      .box:hover {
+        animation-play-state: paused;
+      }
 
-</html>
-```
+      @keyframes changebox {
+        10% {
+          background: red;
+        }
+        50% {
+          width: 80px;
+        }
+        70% {
+          border: 15px solid yellow;
+        }
+        100% {
+          width: 180px;
+          height: 180px;
+        }
+      }
+    &lt;/style>
+  &lt;/head>
+
+  &lt;body>
+    &lt;div class="box"></div>
+  &lt;/body>
+&lt;/html>
+</code></pre>
 
 ![image](/assets/img/animation/animation.gif)
 
-##### 分析：
+### 分析：
 
 我们先来看看 keyframes 这个关键点，它定义了一个动画组合叫 changebox，里面的 10%，50%，70%，100%代表在变化中不同时间点的属性值，比如这个动画的总时间是 1s，那么 10%就是在 0-0.1s 中的动画，通过这个我们可以较精确的控制动画变化中任何一个时间点的属性效果，这大大提高了我们对动画的把控，是做复杂动画的基础，我们再回来看 animation 中整整八个值，是不是有点夸张，还没见过这么长的值，通过控制 animation 的每个值，控制动画变得非常灵活，我们来具体了解它的语法以及各个值代表着什么：
 
