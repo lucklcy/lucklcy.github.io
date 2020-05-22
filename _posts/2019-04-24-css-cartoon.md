@@ -11,12 +11,12 @@ tags: Animation Css
 
 ## 容易混淆的几个 css 属性
 
-| 属性               | 含义                                                                                                        |
-| ------------------ | ----------------------------------------------------------------------------------------------------------- |
-| animation（动画）  | 用于设置动画属性，他是一个简写的属性，包含 6 个属性                                                         |
-| transition（过渡） | 用于设置元素的样式过度，和 animation 有着类似的效果，但细节上有很大的不同                                   |
-| transform（变形）  | 用于元素进行旋转、缩放、移动或倾斜，和设置样式的动画并没有什么关系，就相当于 color 一样用来设置元素的“外表” |
-| translate（移动）  | translate 只是 transform 的一个属性值，即移动。                                                             |
+| 属性             | 含义                                                                                                        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| animation(动画)  | 用于设置动画属性，他是一个简写的属性，包含 6 个属性                                                         |
+| transition(过渡) | 用于设置元素的样式过度，和 animation 有着类似的效果，但细节上有很大的不同                                   |
+| transform(变形)  | 用于元素进行旋转、缩放、移动或倾斜，和设置样式的动画并没有什么关系，就相当于 color 一样用来设置元素的“外表” |
+| translate(移动)  | translate 只是 transform 的一个属性值，即移动。                                                             |
 
 ## transition
 
@@ -62,12 +62,34 @@ tags: Animation Css
 
 语法：**==transition: property duration timing-function delay;==**
 
+**需要注意的是各个属性的顺序可以更改，但是 transition-duration 和 transition-delay 这两个属性之间的顺序必须是一前一后。**
+
 | 值                         | 描述                              |
 | -------------------------- | --------------------------------- |
 | transition-property        | 规定设置过渡效果的 CSS 属性的名称 |
 | transition-duration        | 规定完成过渡效果需要多少秒或毫秒  |
 | transition-timing-function | 规定速度效果的速度曲线            |
 | transition-delay           | 定义过渡效果何时开始              |
+
+#### transition-property
+
+如果你想让状态只在某一个属性上延迟，比如 height，我们就可以这样写：
+
+<pre><code class="language-html">transition: 1s height;</code></pre>
+
+#### transition-delay
+
+在同一行 transition 语句中，可以分别指定多个属性。
+
+<pre><code class="language-html">transition: 1s height, 1s width;</code></pre>
+
+如果想让 height 先发生变化结束以后，再让 width 发生变化。可以为 width 指定一个 delay 参数。
+
+<pre><code class="language-css">transition: 1s height, 1s 1s width;</code></pre>
+
+一条 transition 规则，只能定义一个属性的变化，不能涉及多个属性。
+
+<pre><code class="language-css">transition: 1s height, 1s 1s width;//像这条样式，算两条规则。</code></pre>
 
 ## animation
 

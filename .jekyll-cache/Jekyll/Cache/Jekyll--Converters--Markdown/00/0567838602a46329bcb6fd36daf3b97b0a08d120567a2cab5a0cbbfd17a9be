@@ -1,0 +1,41 @@
+I"�<h1 id="html-的一些知识点">HTML 的一些知识点</h1>
+
+<h3 id="html-转译字符">HTML 转译字符</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>字符</th>
+      <th>十进制</th>
+      <th>转义字符</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>”</td>
+      <td>&amp;#34;</td>
+      <td>&amp;quot;</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>&amp;#38;</td>
+      <td>&amp;amp;</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>&amp;#60;</td>
+      <td>&amp;lt;</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>&amp;#62;</td>
+      <td>&amp;gt;</td>
+    </tr>
+    <tr>
+      <td>空格</td>
+      <td>&amp;#160;</td>
+      <td>&amp;nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+:ET

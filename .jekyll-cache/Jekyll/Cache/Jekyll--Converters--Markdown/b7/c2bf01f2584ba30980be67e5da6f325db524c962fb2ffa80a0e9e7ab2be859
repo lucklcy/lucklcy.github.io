@@ -1,0 +1,7 @@
+I"�<h1 id="mac-的一些命令与知识">Mac 的一些命令与知识</h1>
+
+<h3 id="mac-catania-破解文件提示文件已损坏">Mac Catania 破解文件提示文件已损坏：</h3>
+<pre><code class="language-shell">sudo xattr -r -d com.apple.quarantine 应用程序名称【拖拽获取】，示例：
+sudo xattr -r -d com.apple.quarantine /Applications/XMind\ ZEN.app
+</code></pre>
+:ET
