@@ -1,0 +1,49 @@
+I"�<blockquote>
+  <p>Docker 常用命令以及脚本</p>
+</blockquote>
+
+<p><img src="/assets/img/docker/docker_flow.png" alt="img" /></p>
+
+<h3 id="dockerfile">Dockerfile</h3>
+
+<pre><code class="language-dockerfile"># 基础镜像【来源：官网 https://hub.docker.com/】
+FROM nginx:latest
+# 指明容器工作目录
+WORKDIR /
+# 在容器中执行命令
+RUN apt-get update
+RUN apt-get install vim -y
+# 暴露容器端口
+EXPOSE 8080
+# 容器启动脚本
+CMD /usr/sbin/nginx -g "daemon off;"
+</code></pre>
+
+<h3 id="以-dockerfile-构建镜像并启动容器">以 Dockerfile 构建镜像并启动容器</h3>
+
+<pre><code class="language-dockerfile"># image_name ：自定义镜像名称
+# contaner_name : 自定义容器名称
+# 8080:8080 ：容器暴露端口：本地映射端口
+&gt; docker build -t image_name .
+&gt; docker run --name contaner_name -p 8080:8080 -d image_name
+</code></pre>
+
+<h3 id="进入容器">进入容器</h3>
+
+<pre><code class="language-dockerfile">#exec ：在运行的容器中执行命令
+#-d :分离模式: 在后台运行
+#-i :即使没有附加也保持STDIN 打开
+#-t :分配一个伪终端<br />
+&gt; docker exec -ti container_name /bin/bash
+</code></pre>
+
+<h3 id="将容器变成镜像-screenshot">将容器变成镜像 screenshot</h3>
+
+<pre><code class="language-dockerfile">#-a :提交的镜像作者；
+#-c :使用Dockerfile指令来创建镜像；
+#-m :提交时的说明文字；
+#-p :在commit时，将容器暂停。
+# docker commit -m  “提交说明文字” -a “作者” 要提交的容器名 提交后的镜像名：提交后的镜像tag名
+&gt; docker commit -m "commit message" -a "lucklcy" container_name  image_name:image_tag
+</code></pre>
+:ET
