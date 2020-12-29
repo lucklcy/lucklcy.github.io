@@ -114,14 +114,14 @@ tags: Css
 
 CSS3 允许我们使用 background-repeat 属性两个新值：space 和 round。其兼容性如下表：
 
-| 浏览器                 | space | round |
-| ---------------------- | ----- | ----- |
-| Firefox 3.6, Firefox 4 | ×     | ×     |
-| Safari 4, Safari 5     | ×     | ×     |
-| Chrome 10              | ×     | ×     |
-| IE6, IE7, IE8          | ×     | ×     |
-| IE9                    | ×     | ×     |
-| Opera 10, Opera 11     | √     | √     |
+|         浏览器         | space | round |
+| :--------------------: | :---: | :---: |
+| Firefox 3.6, Firefox 4 |   ×   |   ×   |
+|   Safari 4, Safari 5   |   ×   |   ×   |
+|       Chrome 10        |   ×   |   ×   |
+|     IE6, IE7, IE8      |   ×   |   ×   |
+|          IE9           |   ×   |   ×   |
+|   Opera 10, Opera 11   |   √   |   √   |
 
 space 值的功效可以简单理解为图片的两端对齐平铺，多出来的空间用空白代替：
 ![img](/assets/img/css_background/bg_repeat_05.png)
@@ -155,14 +155,14 @@ round 属性的效果也可以说是两端对齐，但其多出来空间通过�
 
 兼容性如下表：
 
-| 浏览器                 | background-origin |
-| ---------------------- | ----------------- |
-| Firefox 3.6, Firefox 4 | √                 |
-| Safari 4, Safari 5     | √                 |
-| Chrome 10              | √                 |
-| IE6, IE7, IE8          | ×                 |
-| IE9                    | √                 |
-| Opera 10, Opera 11     | √                 |
+|         浏览器         | background-origin |
+| :--------------------: | :---------------: |
+| Firefox 3.6, Firefox 4 |         √         |
+|   Safari 4, Safari 5   |         √         |
+|       Chrome 10        |         √         |
+|     IE6, IE7, IE8      |         ×         |
+|          IE9           |         √         |
+|   Opera 10, Opera 11   |         √         |
 
 ### background-clip
 
@@ -173,15 +173,15 @@ round 属性的效果也可以说是两端对齐，但其多出来空间通过�
 
 兼容性如下表：
 
-| 浏览器             | background-clip         |
-| ------------------ | ----------------------- |
-| Firefox 3.6        | 见下面的备注说明        |
-| Firefox 4          | √                       |
+|       浏览器       |     background-clip     |
+| :----------------: | :---------------------: |
+|    Firefox 3.6     |    见下面的备注说明     |
+|     Firefox 4      |            √            |
 | Safari 4, Safari 5 | -webkit-background-clip |
-| Chrome 10          | √                       |
-| IE6, IE7, IE8      | ×                       |
-| IE9                | √                       |
-| Opera 10, Opera 11 | √                       |
+|     Chrome 10      |            √            |
+|   IE6, IE7, IE8    |            ×            |
+|        IE9         |            √            |
+| Opera 10, Opera 11 |            √            |
 
 **备注说明**：Firefox 1.0 ~Firefox 3.6 支持 老的解析：border 和 padding，但是并 × content 以及后来的 content-box 值。
 
@@ -214,14 +214,14 @@ round 属性的效果也可以说是两端对齐，但其多出来空间通过�
 
 background-size 兼容性如下表：
 
-| 浏览器                 | background-size |
-| ---------------------- | --------------- |
-| Firefox 3.6, Firefox 4 | √               |
-| Safari 4, Safari 5     | √               |
-| Chrome 10              | √               |
-| IE6, IE7, IE8          | ×               |
-| IE9                    | √               |
-| Opera 10, Opera 11     | √               |
+|         浏览器         | background-size |
+| :--------------------: | :-------------: |
+| Firefox 3.6, Firefox 4 |        √        |
+|   Safari 4, Safari 5   |        √        |
+|       Chrome 10        |        √        |
+|     IE6, IE7, IE8      |        ×        |
+|          IE9           |        √        |
+|   Opera 10, Opera 11   |        √        |
 
 ## 属性的缩写
 
@@ -240,16 +240,16 @@ CSS3 中解析为：
 
 具体这些初始值参见下表：
 
-| 属性                  | 值          |
-| --------------------- | ----------- |
-| background-color      | transparent |
-| background-image      | none        |
-| background-repeat     | repeat      |
-| background-attachment | scroll      |
-| background-position   | 0% 0%       |
-| background-origin     | padding-box |
-| background-clip       | border-box  |
-| background-size       | auto        |
+|         属性          |     值      |
+| :-------------------: | :---------: |
+|   background-color    | transparent |
+|   background-image    |    none     |
+|   background-repeat   |   repeat    |
+| background-attachment |   scroll    |
+|  background-position  |    0% 0%    |
+|   background-origin   | padding-box |
+|    background-clip    | border-box  |
+|    background-size    |    auto     |
 
 当我们对同一个元素应用两个 background 规则的时候会发现有一个是不起作用的。
 ![img](/assets/img/css_background/bg_acronym_05.png)
@@ -263,14 +263,14 @@ CSS3 中解析为：
 
 在 CSS2.1 中，任何 HTML 元素只能添加一张背景图片，然而，在 CSS3 中，我们可以给任意元素添加 N 张背景图片，关于该特性的基础知识及效果 demo 可以参见这里。该特性兼容性如下表：
 
-| 浏览器                 | Multiple backgrounds |
-| ---------------------- | -------------------- |
-| Firefox 3.6, Firefox 4 | √                    |
-| Safari 4, Safari 5     | √                    |
-| Chrome 10              | √                    |
-| IE6, IE7, IE8          | ×                    |
-| IE9                    | √                    |
-| Opera 10, Opera 11     | √                    |
+|         浏览器         | Multiple backgrounds |
+| :--------------------: | :------------------: |
+| Firefox 3.6, Firefox 4 |          √           |
+|   Safari 4, Safari 5   |          √           |
+|       Chrome 10        |          √           |
+|     IE6, IE7, IE8      |          ×           |
+|          IE9           |          √           |
+|   Opera 10, Opera 11   |          √           |
 
 ### 一般写法
 

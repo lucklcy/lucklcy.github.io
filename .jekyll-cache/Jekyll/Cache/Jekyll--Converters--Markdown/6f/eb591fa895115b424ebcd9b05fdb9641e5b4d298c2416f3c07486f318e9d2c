@@ -1,4 +1,4 @@
-I"aL<h4 id="模式说明">模式说明</h4>
+I"yK<h4 id="模式说明">模式说明</h4>
 
 <ul>
   <li>一般指令模式 (command mode)
@@ -60,7 +60,7 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">按键组合按键组合按键组合</th>
+      <th style="text-align: center">按键组合</th>
       <th style="text-align: center">按键说明按键说明按键说明</th>
     </tr>
   </thead>
@@ -90,7 +90,7 @@
       <td style="text-align: center">游標移動到非空白字元的上一列</td>
     </tr>
     <tr>
-      <td style="text-align: center">n<space></space></td>
+      <td style="text-align: center">n&lt;space&gt;</td>
       <td style="text-align: center">那個 n 表示『數字』，例如 20 。按下數字後再按空白鍵，游標會向右移動這一列的 n 個字元。例如 20<space> 則游標會向後面移動 20 個字元距離。</space></td>
     </tr>
     <tr>
@@ -126,7 +126,7 @@
       <td style="text-align: center">移動到這個檔案的第一列，相當於 1G 啊！ (常用)</td>
     </tr>
     <tr>
-      <td style="text-align: center">n<Enter></Enter></td>
+      <td style="text-align: center">n&lt;Enter&gt;</td>
       <td style="text-align: center">n 為數字。游標向下移動 n 列(常用)</td>
     </tr>
   </tbody>
@@ -137,7 +137,7 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">按键组合按键组合按键组合按键组合按键组合按键组合按键组合按键组合按键组合按键组合</th>
+      <th style="text-align: center">按键组合</th>
       <th style="text-align: center">按键说明按键说明按键说明</th>
     </tr>
   </thead>
@@ -178,7 +178,7 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">按键组合按键组合按键组合按键组合按键组合</th>
+      <th style="text-align: center">按键组合</th>
       <th style="text-align: center">按键说明按键说明按键说明</th>
     </tr>
   </thead>
@@ -273,7 +273,7 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">按键组合按键组合按键组合按键组合按键组合</th>
+      <th style="text-align: center">按键组合</th>
       <th style="text-align: center">按键说明按键说明按键说明</th>
     </tr>
   </thead>

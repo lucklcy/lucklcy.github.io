@@ -1,0 +1,446 @@
+I"0><blockquote>
+  <p>本文原出处于<strong><em><a href="https://juejin.cn/post/6908879198933221383#heading-0">掘金</a></em></strong>,原作者：<strong><em>JowayYoung</em></strong></p>
+</blockquote>
+
+<h3 id="基础选择器">基础选择器</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">别名</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">tag</td>
+      <td style="text-align: center">标签选择器</td>
+      <td style="text-align: center">指定类型的标签</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">#id</td>
+      <td style="text-align: center">ID 选择器</td>
+      <td style="text-align: center">指定身份的标签</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">.class</td>
+      <td style="text-align: center">类选择器</td>
+      <td style="text-align: center">指定类名的标签</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">*</td>
+      <td style="text-align: center">通配选择器</td>
+      <td style="text-align: center">所有类型的标签</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="层次选择器">层次选择器</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">别名</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">elemP elemC</td>
+      <td style="text-align: center">后代选择器</td>
+      <td style="text-align: center">元素的后代元素</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">elemP&gt;elemC</td>
+      <td style="text-align: center">子代选择器</td>
+      <td style="text-align: center">元素的子代元素</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">elem1+elem2</td>
+      <td style="text-align: center">相邻同胞选择器</td>
+      <td style="text-align: center">元素相邻的同胞元素</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">elem1~elem2</td>
+      <td style="text-align: center">通用同胞选择器</td>
+      <td style="text-align: center">元素后面的同胞元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="集合选择器">集合选择器</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">别名</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">elem1,elem2</td>
+      <td style="text-align: center">并集选择器</td>
+      <td style="text-align: center">多个指定的元素</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">elem.class</td>
+      <td style="text-align: center">交集选择器</td>
+      <td style="text-align: center">指定类名的元素</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">√</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="条件选择器">条件选择器</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">:has</td>
+      <td style="text-align: center">包含指定元素的元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:is</td>
+      <td style="text-align: center">指定条件的元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:not</td>
+      <td style="text-align: center">非指定条件的元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">√</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="状态选择器">状态选择器</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">:active</td>
+      <td style="text-align: center">鼠标激活的元素</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:hover</td>
+      <td style="text-align: center">鼠标悬浮的元素</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:link</td>
+      <td style="text-align: center">未访问的链接元素</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:visited</td>
+      <td style="text-align: center">已访问的链接元素</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:target</td>
+      <td style="text-align: center">当前锚点的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:focus</td>
+      <td style="text-align: center">输入聚焦的表单元素</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:required</td>
+      <td style="text-align: center">输入必填的表单元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:checked</td>
+      <td style="text-align: center">选项选中的表单元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:disabled</td>
+      <td style="text-align: center">事件禁用的表单元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:read-only</td>
+      <td style="text-align: center">只读的表单元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:focus-within</td>
+      <td style="text-align: center">内部表单元素处于聚焦状态的元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:blank</td>
+      <td style="text-align: center">输入为空的表单元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:placeholder-shown</td>
+      <td style="text-align: center">占位显示的表单元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:playing</td>
+      <td style="text-align: center">开始播放的媒体元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:paused</td>
+      <td style="text-align: center">暂停播放的媒体元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">×</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="结构选择器">结构选择器</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">:root</td>
+      <td style="text-align: center">文档的根元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:empty</td>
+      <td style="text-align: center">无子元素的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:nth-child(n)</td>
+      <td style="text-align: center">元素中指定顺序索引的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:first-child</td>
+      <td style="text-align: center">元素中为首的元素</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:last-child</td>
+      <td style="text-align: center">元素中为尾的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:only-child</td>
+      <td style="text-align: center">父元素仅有该元素的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:nth-of-type(n)</td>
+      <td style="text-align: center">标签中指定顺序索引的标签</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:first-of-type</td>
+      <td style="text-align: center">标签中为首的标签</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:last-of-type</td>
+      <td style="text-align: center">标签中为尾标签</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">:only-of-type</td>
+      <td style="text-align: center">父元素仅有该标签的标签</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="属性选择器">属性选择器</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">[attr]</td>
+      <td style="text-align: center">指定属性的元素</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">[attr=val]</td>
+      <td style="text-align: center">属性等于指定值的元素</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">[attr*=val]</td>
+      <td style="text-align: center">属性包含指定值的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">[attr^=val]</td>
+      <td style="text-align: center">属性以指定值开头的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">[attr$=val]</td>
+      <td style="text-align: center">属性以指定值结尾的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">√</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="伪元素">伪元素</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">选择器</th>
+      <th style="text-align: center">说明</th>
+      <th style="text-align: center">版本</th>
+      <th style="text-align: center">常用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">::before</td>
+      <td style="text-align: center">在元素前插入的内容</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">::after</td>
+      <td style="text-align: center">在元素后插入的内容</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">√</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">::first-letter</td>
+      <td style="text-align: center">元素的首字母</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">::first-line</td>
+      <td style="text-align: center">元素的首行</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">::selection</td>
+      <td style="text-align: center">鼠标选中的元素</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">::backdrop</td>
+      <td style="text-align: center">全屏模式的元素</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">×</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">::placeholder</td>
+      <td style="text-align: center">表单元素的占位</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">√</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>选择器真正的用处不仅仅是说明选项里的描述，更多是搭配起来能起到的最大作用。这些选择器组成的选择器系统是整个 CSS 体系里的核心，使用选择器能带来以下好处。</p>
+
+<ul>
+  <li>清晰易读：对于那些结构与行为分离的写法，使用 sass/less 编写属性时结构会更清晰易读，减少很多无用或少用的类，保持 css 文件的整洁性和观赏性</li>
+  <li>确保一致：减少修改类而有可能导致样式失效的问题，有时修改类但未确保 HTML 和 CSS 的一致而导致样式失效</li>
+  <li>剔除累赘：减少无实质性使用的类，例如很多层嵌套的标签，这些标签可能只使用到一个属性，就没必要新建类关联</li>
+  <li>高效流畅：使用选择器可实现一些看似只能由 JS 才能实现的效果，既减少代码量也减少 JS 对 DOM 的操作，使得交互效果更流畅</li>
+</ul>
+:ET
