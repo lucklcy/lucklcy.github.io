@@ -1,4 +1,4 @@
-I"�<h1 id="curl-command">Curl Command</h1>
+I"�<h1 id="curl-command">Curl Command</h1>
 
 <h3 id="curl-指令基本介紹與常見用法">Curl 指令基本介紹與常見用法</h3>
 
@@ -6,7 +6,7 @@
   <p>Curl 是一個在 Linux 上用來透過 HTTP Protocol（HTTP HyperText Transfer Protocol 定義存取網路資源的協定，讓我們可以使用 client / server 模式來取得網路資源）下載和上傳檔案的指令（比起 wget 只能下載強大許多）。它基本的指令格式如下：</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl [options] [URL...]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl [options] [URL...]
 </code></pre></div></div>
 
 <p>打開終端機（terminal）然後，curl 後面加網址，就會在終端機內顯示回傳的 response，可能是 HTML、JSON 或是 XML 等格式，根據輸入的 URL 內容而定。</p>

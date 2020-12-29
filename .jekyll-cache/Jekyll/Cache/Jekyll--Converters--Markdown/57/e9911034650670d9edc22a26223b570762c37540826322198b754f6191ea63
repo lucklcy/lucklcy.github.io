@@ -1,4 +1,4 @@
-I"7-<h1 id="repository-manager-3">Repository Manager 3</h1>
+I"�-<h1 id="repository-manager-3">Repository Manager 3</h1>
 
 <p><a href="https://help.sonatype.com/repomanager3">Nexus 官方文档</a></p>
 
@@ -74,7 +74,7 @@
 
 <h4 id="安装-nexus-oss">安装 Nexus OSS</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /path/to/Downloads
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /path/to/Downloads
 $ tar -xf nexus-3.12.1-01-unix.tar.gz
 $ cd nexus-3.12.1-01-unix
 $ sudo mv nexus-3.12.1-01 /usr/local/
@@ -90,7 +90,7 @@ $ sudo mv sonatype-work /Data/
 
 <h4 id="配置-nexus-oss">配置 Nexus OSS</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /usr/local/nexus-2.14.1-01/conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /usr/local/nexus-2.14.1-01/conf
 $ sudo vim nexus-propertities
 
 # 修改以下内容
@@ -99,7 +99,7 @@ nexus-work=/Data/nexus-repos/sonatype-work/nexus
 
 <h4 id="测试运行">测试运行</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nexus start
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nexus start
 
 # 停止
 $ nexus stop
@@ -208,14 +208,14 @@ $ nexus restart
 
 <h2 id="配置-npm-registry">配置 npm registry</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set registry registry = http://localhost:8081/repository/npm-all/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set registry registry = http://localhost:8081/repository/npm-all/
 </code></pre></div></div>
 
 <blockquote>
   <p>安装测试</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 查看一下 是否从本地服务器中下载
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 查看一下 是否从本地服务器中下载
 $ npm -loglevel info install grunt
 </code></pre></div></div>
 
@@ -239,7 +239,7 @@ $ npm -loglevel info install grunt
 
 <p><img src="/assets/img/nexus_oss_3/3112405-3a59e0300667d076.png" alt="image" /></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 使用
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 使用
 $ npm login –registry=http://localhost:8081/repository/mygroup
 // 进行登陆，需要填写账号、密码以及邮箱。
 </code></pre></div></div>
@@ -253,14 +253,14 @@ $ npm login –registry=http://localhost:8081/repository/mygroup
 <p><em>要发布的模块，必须保证在根目录下有 package.json 文件，否则会报错。</em>
 <em><br />pachage.json 文件内容比较随意，如果比较懒 可以用 npm init 直接自动生成。</em></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> { "name": "myhost", "version": "1.0.0" }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> { "name": "myhost", "version": "1.0.0" }
 </code></pre></div></div>
 
 <blockquote>
   <p>然后执行发布命令：</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm publish –registry http://localhost:8081/repository/myhost
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm publish –registry http://localhost:8081/repository/myhost
 </code></pre></div></div>
 
 <p><img src="/assets/img/nexus_oss_3/3112405-7ff83834a03ba6c5.png" alt="image" /></p>
@@ -269,7 +269,7 @@ $ npm login –registry=http://localhost:8081/repository/mygroup
   <p>然后我遇到了报错，按照报错执行</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm adduser –registry http://localhost:8081/repository/myhost
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm adduser –registry http://localhost:8081/repository/myhost
 </code></pre></div></div>
 
 <blockquote>
@@ -288,7 +288,7 @@ $ npm login –registry=http://localhost:8081/repository/mygroup
   <p>package.json 可以指定 name 和 version 并且可以添加发布路径的配置：</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "name": "intro",
     "version": "1.0.0",
     "publishConfig" : {

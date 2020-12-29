@@ -150,7 +150,7 @@ tags: Animation Css
 > - **delay** : **定义在浏览器开始执行动画之前等待的时间，值整个 animation 执行之前等待的时间**
 > - **iteration-count** : **定义动画的播放次数，可选具体次数或者无限(infinite)**
 > - **direction** : **设置动画播放方向：normal(按时间轴顺序),reverse(时间轴反方向运行),alternate(轮流，即来回往复进行),alternate-reverse(动画先反运行再正方向运行，并持续交替运行)**
-> - **fill-mode** : **控制动画结束后，元素的样式，有四个值：none(回到动画没开始时的状态)，forwards(动画结束后动画停留在结束状态)，backwords(动画回到第一帧的状态)，both(根据 animation-direction 轮流应用 forwards 和 backwards 规则)，注意与 iteration-count 不要冲突(动画执行无限次)**
+> - **fill-mode** : **控制动画结束后，元素的样式，有四个值：none(回到动画没开始时的状态)，forwards(动画结束后动画停留在结束状态)，backwards(动画回到第一帧的状态)，both(根据 animation-direction 轮流应用 forwards 和 backwards 规则)，注意与 iteration-count 不要冲突(动画执行无限次)**
 > - **play-state** : **控制元素动画的播放状态，通过此来控制动画的暂停和继续，两个值：running(继续)，paused(暂停)**
 
 animation 与 transition 不同的是，keyframes 提供更多的控制，尤其是时间轴的控制，这点让 css animation 更加强大，使得 flash 的部分动画效果可以由 css 直接控制完成，而这一切，仅仅只需要几行代码，也因此诞生了大量基于 css 的动画库，用来取代 flash 的动画部分。在我的项目中一般用 **Animate.css** 来设置一些动画

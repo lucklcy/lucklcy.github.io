@@ -1,4 +1,4 @@
-I"�'<p><img src="/assets/img/deploy/001.png" alt="image" /></p>
+I"�'<p><img src="/assets/img/deploy/001.png" alt="image" /></p>
 
 <h2 id="写在前面">写在前面</h2>
 
@@ -82,7 +82,7 @@
 
 <h4 id="安装">安装</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tar -xf nexus-3.12.1-01-unix.tar.gz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tar -xf nexus-3.12.1-01-unix.tar.gz
 $ cd nexus-3.12.1-01/bin
 $ ./nexus run
 </code></pre></div></div>
@@ -99,7 +99,7 @@ $ ./nexus run
 
 <h4 id="npm-私服使用">NPM 私服使用</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set registry http://localhost:8081/repository/cnpm-group/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set registry http://localhost:8081/repository/cnpm-group/
 // 查看一下 是否从本地服务器中下载
 $ npm -loglevel info install grunt
 </code></pre></div></div>
@@ -116,7 +116,7 @@ $ npm -loglevel info install grunt
 
 <p>在 admin 之外可以重新设置一个账号，以及权限。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 使用以下命令进行登陆
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 使用以下命令进行登陆
 $ npm login -–registry=http://localhost:8081/repository/cnpm-group/
 </code></pre></div></div>
 
@@ -130,14 +130,14 @@ $ npm login -–registry=http://localhost:8081/repository/cnpm-group/
 
 <p>在模块根目录执行 publish 命令：<strong>【注意地址为本地仓库地址】</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm publish -registry http://localhost:8081/repository/cnpm-host/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm publish -registry http://localhost:8081/repository/cnpm-host/
 </code></pre></div></div>
 
 <p><img src="/assets/img/deploy/006.png" alt="image" /></p>
 
 <h4 id="验证上传">验证上传</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install npm_test --loglevel info
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install npm_test --loglevel info
 </code></pre></div></div>
 
 <p><img src="/assets/img/deploy/007.png" alt="image" /></p>
