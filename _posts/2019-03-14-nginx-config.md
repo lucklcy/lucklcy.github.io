@@ -60,6 +60,17 @@ tags: nginx
 -x和!-x用来判断文件是否可执行
 </code></pre>
 
+### 匹配优先级：
+
+<pre><code class="language-conf">多个 location 配置的情况下匹配顺序为:
+精确匹配 =
+前缀匹配 ^~
+按文件中顺序的正则匹配
+匹配不带任何修饰的前缀匹配
+交给/通用匹配
+当有匹配成功时候，停止匹配，按当前匹配规则处理请求
+</code></pre>
+
 ### rewrite 指令的最后一项参数为 flag 标记，flag 标记有：
 
 <pre><code class="language-conf">1.last 相当于apache里面的[L]标记，表示rewrite。
