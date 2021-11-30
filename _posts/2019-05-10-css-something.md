@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '一些常用的CSS技巧'
+title: "一些常用的CSS技巧"
 date: 2019-05-10
 author: lucklcy
-cover: '/assets/img/css.png'
+cover: "/assets/img/css.png"
 tags: Css
 ---
 
@@ -25,7 +25,14 @@ tags: Css
 
 ### 二.文字超出省略、文字两端对齐
 
-#### 超出省略
+#### 单行超出省略
+
+<pre><code class="language-conf">overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+</code></pre>
+
+#### 多行超出省略
 
 <pre><code class="language-conf">.line-camp( @clamp:2 ) {
   text-overflow: -o-ellipsis-lastline;
