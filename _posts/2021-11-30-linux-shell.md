@@ -70,3 +70,8 @@ tags: linux
 #### shell 登录信息
 
 ![image](/assets/img/bash/etc_issue.png)
+
+#### sed 命令
+
+![image](/assets/img/bash/sed.png)
+![image](/assets/img/bash/sed_param.png)
